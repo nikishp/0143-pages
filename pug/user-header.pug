@@ -1,0 +1,8 @@
+.user__header
+  .user__img
+    img(src=""+userImg, alt=""+userName + " " + userPosition)
+  .user__info
+    h2.user__info-name #{userName}
+    p.user__info-position #{userPosition}
+    .user__info-signature !{userDescription}
+    include user-statistics

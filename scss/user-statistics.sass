@@ -1,0 +1,62 @@
+.user-statistics
+  margin-top: 15px
+.user-statistics__item
+  display: flex
+  align-items: center
+
+.user-statistics__item--title,.user-statistics__item--result
+  .user-statistics__item-col
+    margin-left: auto
+    text-align: center
+.user-statistics__item--title
+  margin-bottom: 15px
+  font-size: 13px
+  line-height: 1.15
+  border-bottom: 1px solid $borderColor
+  .user-statistics__item-col
+    padding-bottom: 8px
+
+.user-statistics__item-col
+  width: 100%
+  &:last-child
+    width: 98px
+    flex-shrink: 0
+
+.user-statistics__item--result
+  margin-top: 15px
+  padding-top: 8px
+  font-weight: 700
+  font-size: 16px
+  border-top: 1px solid $borderColor
+  .user-statistics__item-col
+    &:first-child
+      text-align: left
+.user-statistics__item
+  &:not(:first-child, :last-child)
+    font-size: 13px
+    line-height: 1
+    border-left: 1px solid rgba(51, 51, 51, 0.2)
+    .user-statistics__item-col
+      margin-bottom: 2px
+      &:last-child
+        padding-right: 39px
+        text-align: right
+      span
+        position: relative
+        display: flex
+        align-items: center
+        padding: 6px
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          bottom: 0
+          z-index: -1
+          width: var(--width)
+          background: var(--color)
+          border-radius: 0 3px 3px 0
+          transition: width .3s
+  &:nth-last-child(2)
+    .user-statistics__item-col
+      margin-bottom: 0 !important
